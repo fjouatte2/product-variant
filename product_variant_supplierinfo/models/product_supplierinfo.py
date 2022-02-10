@@ -27,7 +27,6 @@ class ProductSupplierInfo(models.Model):
         vals = self._check_product_template(vals)
         return super(ProductSupplierInfo, self).create(vals)
 
-    @api.multi
     def write(self, vals):
         vals = self._check_product_template(vals)
         return super(ProductSupplierInfo, self).write(vals)

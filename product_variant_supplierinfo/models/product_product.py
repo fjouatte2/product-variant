@@ -36,7 +36,6 @@ class ProductProduct(models.Model):
         'product.supplierinfo',
         compute='_compute_seller_ids')
 
-    @api.multi
     def _compute_seller_ids(self):
         for product in self:
             sellers = product.product_tmpl_id.seller_ids
